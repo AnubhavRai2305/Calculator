@@ -352,13 +352,44 @@ button:active {
     }
 
     document.addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
+        
+        if (event.key === "/") {
             event.preventDefault()
+        }
+
+        if (event.key >= "0" && event.key <= "9") {
+            display.value += event.key;
+        } 
+   
+        else if (event.key === "+") {
+            add()
+        } 
+        else if (event.key === "-") {
+            sub()
+        } 
+        else if (event.key === "*") {
+            multi()
+        } 
+        else if (event.key === "/") {
+            divison()
+        }
+        else if (event.key === ".") {
+            deci()
+        }
+        else if (event.key === "Enter") {
+            event.preventDefault();
             enter()
+        } 
+        else if (event.key === "Backspace") {
+            back()
+        }
+        else if (event.key === "Escape") {
+            C()
         }
     })
 
 </script>
 </html>
+
 
 
