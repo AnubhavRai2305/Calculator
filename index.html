@@ -99,13 +99,21 @@ button:active {
     display: none;
 }
 
- #monkey img {
+#monkey img {
     width: 250px;
     height: auto;
     border-radius: 500px;
     border: 5px solid gold;
     box-shadow: 0 0 50px white
 } 
+
+#thinking img {
+    width: 250px;
+    height: auto;
+    border-radius: 500px;
+    border: 5px solid gold;
+    box-shadow: 0 0 50px white
+}
 
 @media (max-width: 600px) {
     #main {
@@ -132,7 +140,12 @@ button:active {
 </style>
 <body>
     <div id="monkey">
+        <h1>Me rn</h1>
         <img src="https://media.tenor.com/hysCqeAWAssAAAAe/monkey-thinking.png" alt="Monkeythink">
+    </div>
+    <div id="thinking">
+        <h1>You rn</h1>
+        <img src="https://a.pinatafarm.com/640x432/c7a582ddc1/calculator-kid.jpg">
     </div>
     <h1>My Calculator</h1>
     <div id = 'box'>
@@ -280,11 +293,14 @@ button:active {
     
     function monkey(){
         let monkeypic = document.getElementById("monkey")
-        
+        let boy = document.getElementById("thinking")
+
         monkeypic.style.display = "block"
+        boy.style.display = 'none'
 
         setTimeout(function() {
             monkeypic.style.display = "none"
+            boy.style.display = 'block'
         }, 1500)
     }
 
